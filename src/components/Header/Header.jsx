@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useRef } from 'react';
 import './style.css';
 import { BsXLg } from 'react-icons/bs';
@@ -61,7 +62,6 @@ function Header() {
           </div>
         </div>
       </div>
-      {/* </div> */}
     </header>
   );
 }
