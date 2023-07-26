@@ -30,17 +30,17 @@ function Header() {
                 FOTO DIGITAL
               </button>
             </Link>
-            <Link to="/fotofija">
+            <Link to="/fotoanalogica">
               <button className="menu" onClick={showNavBar}>
-                FOTO 35mm
+                FOTO ANALOGICA
               </button>
             </Link>
-            <Link to="/videos">
+            <Link to="/video">
               <button className="menu" onClick={showNavBar}>
                 VIDEOS
               </button>
             </Link>
-            <Link to="/publicaciones">
+            <Link to="/reel">
               <button className="menu" onClick={showNavBar}>
                 REEL
               </button>
