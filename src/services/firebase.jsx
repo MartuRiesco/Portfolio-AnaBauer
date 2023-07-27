@@ -18,3 +18,17 @@ const firebaseConfig = {
    const dataProducts= documents.map(doc=>doc.data())
   return dataProducts
   };
+  export async function getVideosDireccion() {
+    const coleccionProductos = collection(db,'video_direccion');
+  let snapshotProducts= await getDocs(coleccionProductos)
+  const documents= snapshotProducts.docs;
+   const dataProducts= documents.map(doc=>doc.data())
+  return dataProducts
+  };
+  export async function getVideosFotografia() {
+    const coleccionProductos = collection(db,'video_fotografia');
+  let snapshotProducts= await getDocs(coleccionProductos)
+  const documents= snapshotProducts.docs;
+   const dataProducts= documents.map(doc=>doc.data())
+  return dataProducts
+  };

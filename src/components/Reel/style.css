@@ -1,0 +1,29 @@
+@font-face {
+    font-family: 'oswald-sb';
+    src: url(../../fonts/Oswald-SemiBold.ttf);
+}
+@font-face {
+    font-family: 'oswald-th';
+    src: url(../../fonts/Oswald-Medium.ttf);
+}
+
+.reel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+.titulo-reel{
+    color: white;
+    font-size:50px;
+    font-family: 'oswald-sb';
+    margin: 20px;
+
+}
+.descrip-reel{
+    color: white;
+    font-family: 'oswald-th';
+}
+.descrip-reel:hover{
+    color: pink;
+}

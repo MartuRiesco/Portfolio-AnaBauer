@@ -1,6 +1,10 @@
 @font-face {
-    font-family: 'barlow-black';
-    src: url(../../fonts/Barlow-SemiBold.ttf);
+    font-family: 'oswald-sb';
+    src: url(../../fonts/Oswald-SemiBold.ttf);
+  }
+  @font-face {
+    font-family: 'oswald-light';
+    src: url(../../fonts/Oswald-Light.ttf);
   }
 .loguito {
     display: flex;
@@ -13,7 +17,7 @@
   }
   .titulo-pag {
     color: white;
-    font-family: 'barlow-black';
+    font-family: 'oswald-sb';
     padding: 10px;
   }
   .header {
@@ -49,6 +53,7 @@
     margin: 0 15px;
     font-size: 1rem;
     transition: 0.3s;
+    font-family: 'oswald-light';
   }
   .nav-btn {
     padding: 5px;
@@ -67,6 +72,9 @@
     color: pink;
     border: none;
     border-color: black;
+  }
+ .titulo-pag:hover{
+    color: pink;
   }
   
   @media screen and (max-width: 768px) {
