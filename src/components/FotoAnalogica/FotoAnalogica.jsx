@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from 'react'
+// eslint-disable-next-line no-unused-vars
+import React, { useEffect, useState } from 'react';
 import { getFotoAnalogica } from '../../services/firebase';
-import Grid from '@mui/material/Grid';
-import Item from '@mui/material/ListItem'
-import './style.css'
+import './style.css';
 
 
 function FotoAnalogica() {
@@ -16,19 +15,15 @@ function FotoAnalogica() {
         leerDatos();
       }, []);
   return (
-    <div className='grilla-fotos'>
-        <Grid container spacing={1}>
-        {Users.map((user)=>(
-             <Grid item xs="auto">
-                 <Item>
-                    <img src={user.img} alt={user.category} className='fotogrilla' />
-                 </Item>
-             </Grid>
-        ))}
-
-
-        </Grid>
-
+    <div className='container_grid'>
+                {Users.map((user)=>(
+                  // eslint-disable-next-line react/jsx-key
+                  <div className='container_grid-img'>
+                      <figure>
+                            <img src={user.img} alt={user.category} />
+                      </figure>
+                  </div>
+                ))}
     </div>
   )
 }

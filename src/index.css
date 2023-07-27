@@ -10,6 +10,11 @@
   text-decoration: none;
 }
 
+.container {
+  max-width: 1440;
+  margin: 0 auto;
+}
+
 :root {
   background-color: #000000;
   font-synthesis: none;
