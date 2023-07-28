@@ -1,29 +1,39 @@
 @font-face {
-    font-family: 'oswald-sb';
-    src: url(../../fonts/Oswald-SemiBold.ttf);
+    font-family: 'barlow-sb';
+    src: url(../../fonts/Barlow-SemiBold.ttf);
 }
 @font-face {
-    font-family: 'oswald-th';
-    src: url(../../fonts/Oswald-Medium.ttf);
+    font-family: 'barlow-th';
+    src: url(../../fonts/Barlow-Thin.ttf);
 }
 
 .reel{
     display: flex;
     flex-direction: column;
+   
+}
+
+.iframe-reel{
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    margin: 10px;
 }
 .titulo-reel{
     color: white;
-    font-size:50px;
-    font-family: 'oswald-sb';
+    font-size:30px;
+    font-family: 'barlow-light';
     margin: 20px;
 
 }
-.descrip-reel{
-    color: white;
-    font-family: 'oswald-th';
+.titulo-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin:20px 0px -25px 40px;
+    
 }
-.descrip-reel:hover{
-    color: pink;
+.hr1{
+    width: 40px;
+    margin-right: -5px;
+    color: white;
 }
