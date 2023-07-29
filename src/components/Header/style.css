@@ -1,6 +1,10 @@
 @font-face {
-    font-family: 'barlow-black';
+    font-family: 'barlow-sb';
     src: url(../../fonts/Barlow-SemiBold.ttf);
+  }
+  @font-face {
+    font-family: 'barlow-light';
+    src: url(../../fonts/Barlow-Regular.ttf);
   }
 .loguito {
     display: flex;
@@ -13,7 +17,7 @@
   }
   .titulo-pag {
     color: white;
-    font-family: 'barlow-black';
+    font-family: 'barlow-sb';
     padding: 10px;
   }
   .header {
@@ -46,6 +50,7 @@
     margin: 0 15px;
     font-size: 1rem;
     transition: 0.3s;
+    font-family: 'barlow-light';
   }
   .nav-btn {
     padding: 5px;
@@ -63,6 +68,9 @@
   .menu:hover {
     color: pink;
     cursor: pointer;
+  }
+ .titulo-pag:hover{
+    color: pink;
   }
   
   @media screen and (max-width: 768px) {

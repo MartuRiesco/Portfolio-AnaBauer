@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'barlow-sb';
+    src: url(../../fonts/Barlow-SemiBold.ttf);
+}
+@font-face {
+    font-family: 'barlow-th';
+    src: url(../../fonts/Barlow-Thin.ttf);
+}
+
+.reel{
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.iframe-reel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.titulo-reel{
+    color: white;
+    font-size:30px;
+    font-family: 'barlow-light';
+    margin: 20px;
+
+}
+.titulo-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin:20px 0px -25px 40px;
+    
+}
+.hr1{
+    width: 40px;
+    margin-right: -5px;
+    color: white;
+}

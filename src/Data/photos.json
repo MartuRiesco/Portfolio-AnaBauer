@@ -1,0 +1,76 @@
+[
+    {
+        "id": 1,
+        "title": "Continuidad 1",
+        "description": "Photo description",
+        "category": "continuidad",
+        "thumbnail": "https://www.nationalgeographic.com.es/medio/2018/02/27/playa-de-isuntza-lekeitio__1280x720.jpg",
+        "sub-category": [
+            {
+                "id": 6,
+                "title": "Foto 1",
+                "description": "Photo description",
+                "category": "continuidad",
+                "img": "https://www.nationalgeographic.com.es/medio/2018/02/27/playa-de-isuntza-lekeitio__1280x720.jpg"
+            },
+            {
+                "id": 7,
+                "title": "Foto 2",
+                "description": "Photo description",
+                "category": "continuidad",
+                "img": "https://www.nationalgeographic.com.es/medio/2018/02/27/playa-de-isuntza-lekeitio__1280x720.jpg"
+            },
+            {
+                "id": 8,
+                "title": "Foto 3",
+                "description": "Photo description",
+                "category": "continuidad",
+                "img": "https://www.nationalgeographic.com.es/medio/2018/02/27/playa-de-isuntza-lekeitio__1280x720.jpg"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Diario de viaje 1",
+        "description": "Photo description",
+        "category": "diario de viaje",
+        "sub-category": false,
+        "thumbnail": "https://www.xtrafondos.com/descargar.php?id=5846&resolucion=2560x1440",
+        "img": [
+            "https://mott.pe/noticias/wp-content/uploads/2019/03/los-50-paisajes-maravillosos-del-mundo-para-tomar-fotos.jpg"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Fotoperiodismo 1",
+        "description": "Photo description",
+        "category": "fotoperiodismo",
+        "sub-category": false,
+        "thumbnail": "https://www.dzoom.org.es/wp-content/uploads/2017/07/seebensee-2384369-810x540.jpg",
+        "img": [
+            "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg"
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Mutar 1",
+        "description": "Photo description",
+        "category": "mutar",
+        "sub-category": false,
+        "thumbnail": "https://medibangpaint.com/wp-content/uploads/2021/05/1.png",
+        "img": [
+            "https://www.dzoom.org.es/wp-content/uploads/2017/07/seebensee-2384369-810x540.jpg"
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Retratos 1",
+        "description": "Photo description",
+        "category": "retratos",
+        "sub-category": false,
+        "thumbnail": "https://mott.pe/noticias/wp-content/uploads/2019/03/los-50-paisajes-maravillosos-del-mundo-para-tomar-fotos.jpg",
+        "img": [
+            "https://static.leonoticias.com/www/multimedia/202107/06/media/MM-senderismo-asturias/oddle-1-ksRC--1350x900@El%20Comercio.jpg"
+        ]
+    }
+]

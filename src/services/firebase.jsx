@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, getDocs, getDoc, collection, doc, query, where } from 'firebase/firestore';
+import { getFirestore, getDocs, collection } from 'firebase/firestore';
 
 const firebaseConfig = {
     apiKey: "AIzaSyCWpeWnaGlBdVndv7x-uWNL5XNp5IQj77A",
@@ -17,4 +17,18 @@ const firebaseConfig = {
   const documents= snapshotProducts.docs;
    const dataProducts= documents.map(doc=>doc.data())
   return dataProducts
-  };
+  }
+  export async function getVideosDireccion() {
+    const coleccionProductos = collection(db,'video_direccion');
+  let snapshotProducts= await getDocs(coleccionProductos)
+  const documents= snapshotProducts.docs;
+   const dataProducts= documents.map(doc=>doc.data())
+  return dataProducts
+  }
+  export async function getVideosFotografia() {
+    const coleccionProductos = collection(db,'video_fotografia');
+  let snapshotProducts= await getDocs(coleccionProductos)
+  const documents= snapshotProducts.docs;
+   const dataProducts= documents.map(doc=>doc.data())
+  return dataProducts
+  }
