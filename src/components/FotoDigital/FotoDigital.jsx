@@ -67,7 +67,6 @@ function FotoDigital( {categories} ) {
                             () => {handleClickSubCat()} : 
                             () => openModal(photo.img)
                             }
-
                         /> 
                 </ImageListItem>
               ))}
