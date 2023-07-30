@@ -1,36 +1,42 @@
-// eslint-disable-next-line no-unused-vars
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/jsx-no-comment-textnodes */
+/* eslint-disable react/prop-types */
 import React, { useState } from 'react';
-import './styles.css';
 import { ImageList, ImageListItem } from '@mui/material';
 import { IoMdClose } from 'react-icons/io';
-import photos from '../../Data/photos.json'
+import './styles.css';
 import { useNavigate } from 'react-router-dom';
 
-function FotoDigital() {  
+function FotoDigital( {categories} ) {
 
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
+  
+  const openModal = (image) => {
+    setSelectedImage(image);
+    setModalOpen(true);
+    console.log("Open Modal");
+  };
+
+  const closeModal = () => {
+  setSelectedImage(null);
+  setModalOpen(false);
+  console.log("Close Modal");
+  };
 
   const navigate = useNavigate();
 
-  const openModal = (image) => {
-        setSelectedImage(image);
-        setModalOpen(true);
-        console.log("Open Modal");
-  }
-
-  const closeModal = () => {
-    setSelectedImage(null);
-    setModalOpen(false);
-    console.log("Close Modal");
+  const handleClickCat = () => {
+    navigate ('/diariosdeviaje/');
   };
 
-  const handleClick = () => {
-    navigate ('/category/:idCategory');
-  }
+  const handleClickSubCat = () => {
+    navigate ('/continuidad/');
+  };
+
 
   return (
-    <div>
+    <div> 
           {modalOpen && (
               <div className="modal-bk">
                   <div className='modal-cont'>
@@ -45,27 +51,29 @@ function FotoDigital() {
                   </div>
               </div>
           )}
-          <ImageList variant='masonry' cols={2} gap={80}>
-              {photos.map((photo) => (
-                <ImageListItem key={photo.img}>
+           <ImageList variant='masonry' cols={2} gap={80}>
+              {categories.map((photo) => (
+                <ImageListItem key={photo.id}>
                         <img 
-                            src={`${photo.thumbnail}?w=248&fit=crop&auto=format`}
+                            src={`${photo.img}?w=248&fit=crop&auto=format`}
                             srcSet={`${photo.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
                             alt={photo.category}
                             loading="lazy"
                             className='fotogrilla'
                             // Si contiene sub-category es true, navega hacia ella, si es false, activa openModal
-                            onClick={photo['sub-category'] ? 
-                                        () => {handleClick()} : 
-                                        () => openModal(photo.thumbnail)
-                                    }
+                            onClick={photo['subcategory'] ? 
+                            () => {handleClickCat()} :
+                            photo['category'] ?
+                            () => {handleClickSubCat()} : 
+                            () => openModal(photo.img)
+                            }
 
                         /> 
                 </ImageListItem>
               ))}
-          </ImageList>
+          </ImageList>        
     </div>
   )
 }
 
-export default FotoDigital
+export default FotoDigital;

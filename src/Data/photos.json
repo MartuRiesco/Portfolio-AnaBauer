@@ -4,30 +4,18 @@
         "title": "Continuidad 1",
         "description": "Photo description",
         "category": "continuidad",
-        "thumbnail": "https://www.nationalgeographic.com.es/medio/2018/02/27/playa-de-isuntza-lekeitio__1280x720.jpg",
-        "sub-category": [
-            {
-                "id": 6,
-                "title": "Foto 1",
-                "description": "Photo description",
-                "category": "continuidad",
-                "img": "https://www.nationalgeographic.com.es/medio/2018/02/27/playa-de-isuntza-lekeitio__1280x720.jpg"
-            },
-            {
-                "id": 7,
-                "title": "Foto 2",
-                "description": "Photo description",
-                "category": "continuidad",
-                "img": "https://www.nationalgeographic.com.es/medio/2018/02/27/playa-de-isuntza-lekeitio__1280x720.jpg"
-            },
-            {
-                "id": 8,
-                "title": "Foto 3",
-                "description": "Photo description",
-                "category": "continuidad",
-                "img": "https://www.nationalgeographic.com.es/medio/2018/02/27/playa-de-isuntza-lekeitio__1280x720.jpg"
-            }
-        ]
+        "thumbnail": "https://i.ibb.co/g986tBV/1.png",
+        "img": "https://i.ibb.co/XpyxbM7/2.png",
+        "sub-category": true
+    },
+    {
+        "id": 6,
+        "title": "Continuidad 1",
+        "description": "Photo description",
+        "category": "continuidad",
+        "thumbnail": "https://i.ibb.co/g986tBV/1.png",
+        "img": "https://i.ibb.co/sswfqBy/3.png",
+        "sub-category": true
     },
     {
         "id": 2,
@@ -35,9 +23,9 @@
         "description": "Photo description",
         "category": "diario de viaje",
         "sub-category": false,
-        "thumbnail": "https://www.xtrafondos.com/descargar.php?id=5846&resolucion=2560x1440",
+        "thumbnail": "https://i.ibb.co/Xz3qyM6/2.png",
         "img": [
-            "https://mott.pe/noticias/wp-content/uploads/2019/03/los-50-paisajes-maravillosos-del-mundo-para-tomar-fotos.jpg"
+            "https://i.ibb.co/Xz3qyM6/2.png"
         ]
     },
     {
@@ -46,7 +34,7 @@
         "description": "Photo description",
         "category": "fotoperiodismo",
         "sub-category": false,
-        "thumbnail": "https://www.dzoom.org.es/wp-content/uploads/2017/07/seebensee-2384369-810x540.jpg",
+        "thumbnail": "https://i.ibb.co/c2yJd4p/3.png",
         "img": [
             "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg"
         ]
@@ -57,7 +45,7 @@
         "description": "Photo description",
         "category": "mutar",
         "sub-category": false,
-        "thumbnail": "https://medibangpaint.com/wp-content/uploads/2021/05/1.png",
+        "thumbnail": "https://i.ibb.co/2gwHQCD/4.png",
         "img": [
             "https://www.dzoom.org.es/wp-content/uploads/2017/07/seebensee-2384369-810x540.jpg"
         ]
@@ -68,7 +56,7 @@
         "description": "Photo description",
         "category": "retratos",
         "sub-category": false,
-        "thumbnail": "https://mott.pe/noticias/wp-content/uploads/2019/03/los-50-paisajes-maravillosos-del-mundo-para-tomar-fotos.jpg",
+        "thumbnail": "https://i.ibb.co/J3Zxcmx/5.png",
         "img": [
             "https://static.leonoticias.com/www/multimedia/202107/06/media/MM-senderismo-asturias/oddle-1-ksRC--1350x900@El%20Comercio.jpg"
         ]

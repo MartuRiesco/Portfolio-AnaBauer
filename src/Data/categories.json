@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "title": "Continuidad 1",
+        "description": "Photo description",
+        "category": "continuidad",
+        "subcategory": false,
+        "img": "https://i.ibb.co/X3D150N/1.png"
+    },
+    {
+        "id": 2,
+        "title": "Diario de viaje 1",
+        "description": "Photo description",
+        "category": "diario de viaje",
+        "subcategory": true,
+        "img": " https://i.ibb.co/5FnbPp3/4.png"
+        
+    },
+    {
+        "id": 3,
+        "title": "Fotoperiodismo 1",
+        "description": "Photo description",
+        "category": "fotoperiodismo",
+        "subcategory": true,
+        "img": "https://i.ibb.co/JCtsbSX/5.png"
+    },
+    {
+        "id": 4,
+        "title": "Mutar 1",
+        "description": "Photo description",
+        "category": "mutar",
+        "subcategory": false,
+        "img": "https://i.ibb.co/n8GT6fD/6.png"
+        
+    },
+    {
+        "id": 5,
+        "title": "Retratos 1",
+        "description": "Photo description",
+        "category": "retratos",
+        "subcategory": true,
+        "img": "https://i.ibb.co/n3nztt7/7.png"
+    }
+]
