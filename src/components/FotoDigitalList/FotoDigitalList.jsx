@@ -36,11 +36,11 @@ const idCategory = params.idCategory
     console.log("Close Modal");
   };
   const handleClick = (titulo, categoria) => {
-    navigate (`/${titulo}/${categoria}`);
+    navigate (`/fotodigital/${titulo}/${categoria}`);
   };
 
   return (
-    <div>
+    <div className='fotos-container'>
           {modalOpen && (
               <div className="modal-bk">
                   <div className='modal-cont'>
@@ -57,20 +57,29 @@ const idCategory = params.idCategory
           )}
         <ImageList variant="masonry" cols={2} gap={80}>
               {Datos.map((dato) => (
-              
-                <ImageListItem key={dato.img}>
-                        <img 
-                            src={`${dato.img}?w=248&fit=crop&auto=format`}
-                            srcSet={`${dato.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                            alt={dato.category}
-                            loading="lazy"
-                            className='fotogrilla'
-                            // Si contiene sub-category es true, navega hacia ella, si es false, activa openModal
-                            onClick={dato.subcat ? 
-                              () => handleClick(dato.category, dato.description) 
-                              : () => openModal(dato.img)}
-
-                        /> </ImageListItem>
+                <ImageListItem key={dato.img}>{ dato.subcat ?                   
+                   <img 
+                      src={`${dato.img}?w=248&fit=crop&auto=format`}
+                       srcSet={`${dato.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                      alt={dato.category}
+                      loading="lazy"
+                      data-title={dato.title}
+                      data-img={dato.img}
+                      className='fotogrilla'
+                     onClick={
+                          () => handleClick(dato.category, dato.description) } />                      
+                : 
+                <img 
+                src={`${dato.img}?w=248&fit=crop&auto=format`}
+                srcSet={`${dato.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                alt={dato.category}
+                loading="lazy"
+                className='fotogrilla'
+                onClick={
+                   () => openModal(dato.img)}
+            />
+                }
+                </ImageListItem>
                         
                         
    
