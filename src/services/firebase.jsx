@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, getDocs, collection } from 'firebase/firestore';
+import { getFirestore, getDocs, collection, where, query } from 'firebase/firestore';
 
 const firebaseConfig = {
     apiKey: "AIzaSyCWpeWnaGlBdVndv7x-uWNL5XNp5IQj77A",
@@ -31,4 +31,12 @@ const firebaseConfig = {
   const documents= snapshotProducts.docs;
    const dataProducts= documents.map(doc=>doc.data())
   return dataProducts
+  }
+  export async function getCategory(categoriaURL) {
+    const coleccionProductos = collection(db, 'fotodigital');
+    const q = query(coleccionProductos, where('category', '==', categoriaURL));
+    let snapshotProductos = await getDocs(q);
+    const documents = snapshotProductos.docs;
+    const dataProductos = documents.map((doc) => ({ ...doc.data(), id: doc.id }));
+    return dataProductos;
   }
