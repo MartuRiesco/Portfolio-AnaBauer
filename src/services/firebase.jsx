@@ -40,3 +40,10 @@ const firebaseConfig = {
     const dataProductos = documents.map((doc) => ({ ...doc.data(), id: doc.id }));
     return dataProductos;
   }
+  export async function getFotoDigital() {
+    const coleccionProductos = collection(db,'fotodigcats');
+  let snapshotProducts= await getDocs(coleccionProductos)
+  const documents= snapshotProducts.docs;
+   const dataProducts= documents.map(doc=>doc.data())
+  return dataProducts
+  }

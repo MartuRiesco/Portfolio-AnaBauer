@@ -8,7 +8,7 @@ import { getCategory } from '../../services/firebase';
 
 // eslint-disable-next-line no-unused-vars
 function FotoDigitalList() {  
-  const [Datos, setDatos] = useState([]);
+  const [Photos, setPhotos] = useState([]);
   const navigate = useNavigate();
 const params =useParams()
 const idCategory = params.idCategory
@@ -16,7 +16,7 @@ const idCategory = params.idCategory
   const [selectedImage, setSelectedImage] = useState(null);
   async function leerDatos() {
     let respuesta = await getCategory(idCategory);
-    setDatos(respuesta);
+    setPhotos(respuesta);
   }
   useEffect(() => {
     leerDatos();
@@ -56,27 +56,27 @@ const idCategory = params.idCategory
               </div>
           )}
         <ImageList variant="masonry" cols={2} gap={80}>
-              {Datos.map((dato) => (
-                <ImageListItem key={dato.img}>{ dato.subcat ?                   
+              {Photos.map((photo) => (
+                <ImageListItem key={photo.img}>{ photo.subcat ?                   
                    <img 
-                      src={`${dato.img}?w=248&fit=crop&auto=format`}
-                       srcSet={`${dato.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                      alt={dato.category}
+                      src={`${photo.img}?w=248&fit=crop&auto=format`}
+                       srcSet={`${photo.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                      alt={photo.category}
                       loading="lazy"
-                      data-title={dato.title}
-                      data-img={dato.img}
+                      data-title={photo.title}
+                      data-img={photo.img}
                       className='fotogrilla'
                      onClick={
-                          () => handleClick(dato.category, dato.description) } />                      
+                          () => handleClick(photo.category, dato.description) } />                      
                 : 
                 <img 
-                src={`${dato.img}?w=248&fit=crop&auto=format`}
-                srcSet={`${dato.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                alt={dato.category}
+                src={`${photo.img}?w=248&fit=crop&auto=format`}
+                srcSet={`${photo.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                alt={photo.category}
                 loading="lazy"
                 className='fotogrilla'
                 onClick={
-                   () => openModal(dato.img)}
+                   () => openModal(photo.img)}
             />
                 }
                 </ImageListItem>
