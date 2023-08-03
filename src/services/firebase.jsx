@@ -40,8 +40,31 @@ const firebaseConfig = {
     const dataProductos = documents.map((doc) => ({ ...doc.data(), id: doc.id }));
     return dataProductos;
   }
+  export async function getCategoryDV(categoriaURL) {
+    const coleccionProductos = collection(db, 'diariodeviaje');
+    const q = query(coleccionProductos, where('category', '==', categoriaURL));
+    let snapshotProductos = await getDocs(q);
+    const documents = snapshotProductos.docs;
+    const dataProductos = documents.map((doc) => ({ ...doc.data(), id: doc.id }));
+    return dataProductos;
+  }
+  export async function getCategorySub(categoriaURL) {
+    const coleccionProductos = collection(db, 'subcarp');
+    const q = query(coleccionProductos, where('category', '==', categoriaURL));
+    let snapshotProductos = await getDocs(q);
+    const documents = snapshotProductos.docs;
+    const dataProductos = documents.map((doc) => ({ ...doc.data(), id: doc.id }));
+    return dataProductos;
+  }
   export async function getFotoDigital() {
     const coleccionProductos = collection(db,'fotodigcats');
+  let snapshotProducts= await getDocs(coleccionProductos)
+  const documents= snapshotProducts.docs;
+   const dataProducts= documents.map(doc=>doc.data())
+  return dataProducts
+  }
+  export async function getDiarioDeViajes() {
+    const coleccionProductos = collection(db,'diariodeviajecats');
   let snapshotProducts= await getDocs(coleccionProductos)
   const documents= snapshotProducts.docs;
    const dataProducts= documents.map(doc=>doc.data())

@@ -4,10 +4,10 @@ import './styles.css';
 import { ImageList, ImageListItem } from '@mui/material';
 import { IoMdClose } from 'react-icons/io';
 import { Link, useNavigate, useParams } from 'react-router-dom';
-import { getCategory } from '../../services/firebase';
+import { getCategory, getCategoryDV, getCategorySub } from '../../services/firebase';
 
 // eslint-disable-next-line no-unused-vars
-function FotoDigitalList() {  
+function FotoDigitalList({type}) {  
   const [Photos, setPhotos] = useState([]);
   const navigate = useNavigate();
 const params =useParams()
@@ -15,12 +15,28 @@ const idCategory = params.idCategory
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
   async function leerDatos() {
-    let respuesta = await getCategory(idCategory);
+    let respuesta 
+    switch (type) {
+        case 'ddvcat':
+        respuesta = await getCategoryDV(idCategory);
+          break;
+          case 'fdcat':
+            respuesta = await getCategory(idCategory);
+          break;
+          case 'sub':
+            respuesta = await getCategorySub(idCategory);
+          break;
+      default: 
+      alert('hola')
+      break;
+      
+    }
+  
     setPhotos(respuesta);
   }
   useEffect(() => {
     leerDatos();
-  }, []);
+  }, [Photos]);
 
 
   
@@ -38,7 +54,10 @@ const idCategory = params.idCategory
   const handleClick = (titulo, categoria) => {
     navigate (`/fotodigital/${titulo}/${categoria}`);
   };
-
+  const disable = ( ) => {
+    console.log(hola);
+  }
+  
   return (
     <div className='fotos-container'>
           {modalOpen && (
@@ -63,20 +82,19 @@ const idCategory = params.idCategory
                        srcSet={`${photo.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
                       alt={photo.category}
                       loading="lazy"
-                      data-title={photo.title}
-                      data-img={photo.img}
                       className='fotogrilla'
                      onClick={
-                          () => handleClick(photo.category, dato.description) } />                      
+                          () => handleClick(photo.category, photo.description) } />                      
                 : 
                 <img 
                 src={`${photo.img}?w=248&fit=crop&auto=format`}
                 srcSet={`${photo.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
                 alt={photo.category}
                 loading="lazy"
-                className='fotogrilla'
-                onClick={
-                   () => openModal(photo.img)}
+                className={ photo.category === 'continuidad' ?  'foto-cont':'fotogrilla'}
+                onClick={ photo.category === 'continuidad' ?  () => disable():
+                   () => openModal(photo.img)
+                   }
             />
                 }
                 </ImageListItem>

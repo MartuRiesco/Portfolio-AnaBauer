@@ -3,22 +3,34 @@ import React, { useEffect, useState } from 'react';
 import './styles.css';
 import Grid from '@mui/material/Unstable_Grid2'
 import Item from '@mui/material/Unstable_Grid2'
-import photos from '../../Data/photos.json'
 import { Link } from 'react-router-dom';
-import { getFotoDigital } from '../../services/firebase';
+import { getDiarioDeViajes, getFotoDigital } from '../../services/firebase';
 
-function FotoDigital() { 
+function FotoDigital({type}) { 
   const [Photos, setPhotos] = useState([]);
   async function leerDatos() {
-    let respuesta = await getFotoDigital();
+    let respuesta 
+    switch (type) {
+        case 'ddviajes':
+        respuesta = await getDiarioDeViajes();
+          break;
+          case 'fotodig':
+            respuesta = await getFotoDigital();
+          break;
+      default: 
+      alert('hola')
+      break;
+      
+    }
+  
     setPhotos(respuesta);
   }
   useEffect(() => {
     leerDatos();
-  }, []);
+  }, [Photos]);
   return (
     <div className='grid-container'>
-          <Grid container spacing={0.5} columns={12}>
+          <Grid container spacing={1} columns={12}>
               {Photos.map((photo) => (
                 <Grid xs={4}>
                 <Item>

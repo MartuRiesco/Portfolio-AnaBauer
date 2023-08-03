@@ -6,8 +6,6 @@ import ImageListItem from '@mui/material/ImageListItem'
 import { ImageList } from '@mui/material';
 import './style.css'
 
-
-
 function FotoAnalogica() {
     const [Users, setUser] = useState([]);
     const [modalOpen, setModalOpen] = useState(false);
