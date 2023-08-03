@@ -21,7 +21,7 @@
         "id": 2,
         "title": "Diario de viaje 1",
         "description": "Photo description",
-        "category": "diario de viaje",
+        "category": "diariodeviaje",
         "sub-category": false,
         "thumbnail": "https://i.ibb.co/Xz3qyM6/2.png",
         "img": [
