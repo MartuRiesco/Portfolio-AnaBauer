@@ -12,7 +12,6 @@ function Video() {
     getDireccion(respuesta);
     let respon = await getVideosFotografia();
     getFotografia(respon);
-  
   }
   useEffect(() => {
     leerDatos();
