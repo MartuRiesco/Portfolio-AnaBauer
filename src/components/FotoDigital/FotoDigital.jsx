@@ -27,7 +27,9 @@ function FotoDigital({type}) {
   }
   useEffect(() => {
     leerDatos();
-  }, [Photos]);
+  }, [type]);
+ 
+  console.log(leerDatos);
   return (
     <div className='grid-container'>
           <Grid container spacing={1} columns={12}>

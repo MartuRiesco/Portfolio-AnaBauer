@@ -19,7 +19,8 @@ const idCategory = params.idCategory
     switch (type) {
         case 'ddvcat':
         respuesta = await getCategoryDV(idCategory);
-          break;
+        console.log(getCategoryDV);
+        break;
           case 'fdcat':
             respuesta = await getCategory(idCategory);
           break;
@@ -36,8 +37,8 @@ const idCategory = params.idCategory
   }
   useEffect(() => {
     leerDatos();
-  }, [Photos]);
-
+  }, [type]);
+console.log(leerDatos);
 
   
   const openModal = (image) => {
