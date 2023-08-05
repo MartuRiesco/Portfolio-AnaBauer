@@ -20,6 +20,7 @@ const onSubmit = (data, event) => {
         position: 'center',
         background:'black',
         color: 'white',
+        fontFamily:'barlow-sb',
         icon: 'success',
         title: 'Mensaje Enviado!',
         showConfirmButton: false,
@@ -28,7 +29,7 @@ const onSubmit = (data, event) => {
   };
   return (
     <div className='formulario' >
-      <h2 className='form-titulo'>Contactame!</h2>
+      
     <form className='form' onSubmit={handleSubmit(onSubmit)}>
         <div className='form-seccion'>
             <label className='form-label'> Nombre</label>

@@ -1,6 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Header from './components/Header/Header';
-import FotoAnalogica from './components/FotoAnalogica/FotoAnalogica';
 import Reel from './components/Reel/Reel';
 import Video from './components/Video/Video';
 import FotoDigital from './components/FotoDigital/FotoDigital';
@@ -20,7 +19,7 @@ function App() {
         <Routes>
             <Route path='/fotodigital' element={<FotoDigital type={'fotodig'} />}/>
             <Route path='/fotodigital/:idCategory' element={<FotoDigitalList type={'fdcat'}/>} />
-            <Route path='/fotoanalogica' element={<FotoAnalogica/>}/>
+            <Route path='/fotoanalogica' element={<FotoDigitalList type={'fotoan'} />}/>
             <Route path='/reel' element={<Reel/>}/>
             <Route path='/fotodigital/diariodeviaje'  element={<FotoDigital type={'ddviajes'} />} />
             <Route path='/fotodigital/retratos/:idCategory' element={<FotoDigitalList type={'sub'} />} />

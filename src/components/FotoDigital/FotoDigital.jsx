@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import './styles.css';
 import Grid from '@mui/material/Unstable_Grid2'
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 import Item from '@mui/material/Unstable_Grid2'
 import { Link } from 'react-router-dom';
 import { getDiarioDeViajes, getFotoDigital } from '../../services/firebase';
@@ -32,9 +33,21 @@ function FotoDigital({type}) {
   console.log(leerDatos);
   return (
     <div className='grid-container'>
-          <Grid container spacing={1} columns={12}>
+       <ThemeProvider
+      theme={createTheme({
+        breakpoints: {
+          values: {
+            laptop: 1024,
+            tablet: 640,
+            mobile: 0,
+            desktop: 1280,
+          },
+        },
+      })}
+    >
+          <Grid container spacing={1} columns={{ mobile:1, tablet:6, laptop:12}} disableEqualOverflow>
               {Photos.map((photo) => (
-                <Grid xs={4}>
+                <Grid mobile={1} tablet={3} laptop={4}>
                 <Item>
                   <Link to={photo.category}>
                         <img 
@@ -53,6 +66,7 @@ function FotoDigital({type}) {
               ))}
         
           </Grid>
+          </ThemeProvider>
     </div>
   )
 }

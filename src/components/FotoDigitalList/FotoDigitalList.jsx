@@ -2,13 +2,15 @@
 import React, { useEffect, useState } from 'react';
 import './styles.css';
 import { ImageList, ImageListItem } from '@mui/material';
+import { isMobile } from 'react-device-detect';
 import { IoMdClose } from 'react-icons/io';
 import { Link, useNavigate, useParams } from 'react-router-dom';
-import { getCategory, getCategoryDV, getCategorySub } from '../../services/firebase';
+import { getCategory, getFotoAnalogica, getCategoryDV, getCategorySub } from '../../services/firebase';
 
 // eslint-disable-next-line no-unused-vars
 function FotoDigitalList({type}) {  
   const [Photos, setPhotos] = useState([]);
+  const [responsive, isResponsive] = useState(false)
   const navigate = useNavigate();
 const params =useParams()
 const idCategory = params.idCategory
@@ -27,6 +29,9 @@ const idCategory = params.idCategory
           case 'sub':
             respuesta = await getCategorySub(idCategory);
           break;
+          case 'fotoan':
+            respuesta = await getFotoAnalogica();
+              break;
       default: 
       alert('hola')
       break;
@@ -38,7 +43,18 @@ const idCategory = params.idCategory
   useEffect(() => {
     leerDatos();
   }, [type]);
-console.log(leerDatos);
+  function esMobile(){
+    if(isMobile){
+      isResponsive(true)
+    }else{
+      isResponsive(false)
+    }
+    
+     }
+     useEffect(()=>{
+      esMobile();
+    },[false])
+
 
   
   const openModal = (image) => {
@@ -61,7 +77,7 @@ console.log(leerDatos);
   
   return (
     <div className='fotos-container'>
-          {modalOpen && (
+          {modalOpen  && (
               <div className="modal-bk">
                   <div className='modal-cont'>
                     <IoMdClose onClick={closeModal} className="modal-close-button">
@@ -75,7 +91,8 @@ console.log(leerDatos);
                   </div>
               </div>
           )}
-        <ImageList variant="masonry" cols={2} gap={80}>
+        
+        <ImageList variant="masonry" cols={ responsive ? 1 : 2} gap={responsive ? 30 :80}>
               {Photos.map((photo) => (
                 <ImageListItem key={photo.img}>{ photo.subcat ?                   
                    <img 
@@ -93,7 +110,7 @@ console.log(leerDatos);
                 alt={photo.category}
                 loading="lazy"
                 className={ photo.category === 'continuidad' ?  'foto-cont':'fotogrilla'}
-                onClick={ photo.category === 'continuidad' ?  () => disable():
+                onClick={ photo.category === 'continuidad'|| responsive === true ?  () => disable():
                    () => openModal(photo.img)
                    }
             />

@@ -9,6 +9,6 @@ h1 {
     object-fit: cover;
 }
 .grid-container {
-    margin: 0px;
-    overflow: hidden;
+    margin: 10px;
+    
 }
