@@ -35,9 +35,9 @@ function Header() {
                 FOTO ANALOGICA
               </button>
             </Link>
-            <Link to="/video">
+            <Link to="/cine">
               <button className="menu" onClick={showNavBar}>
-                VIDEOS
+                CINE
               </button>
             </Link>
             <Link to="/reel">
@@ -45,7 +45,7 @@ function Header() {
                 REEL
               </button>
             </Link>
-            <Link to="/aboutme">
+            <Link to="/sobremi">
               <button className="menu" onClick={showNavBar}>
                 SOBRE MÍ
               </button>

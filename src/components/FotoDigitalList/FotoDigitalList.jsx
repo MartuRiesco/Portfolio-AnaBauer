@@ -1,29 +1,61 @@
-<<<<<<< HEAD
-// eslint-disable-next-line react/prop-types
-=======
+/* eslint-disable react-hooks/exhaustive-deps */
 // eslint-disable-next-line no-unused-vars
 import React, { useEffect, useState } from 'react';
 import './styles.css';
 import { ImageList, ImageListItem } from '@mui/material';
+import { isMobile } from 'react-device-detect';
 import { IoMdClose } from 'react-icons/io';
-import { Link, useNavigate, useParams } from 'react-router-dom';
-import { getCategory } from '../../services/firebase';
+import { useNavigate, useParams } from 'react-router-dom';
+import { getCategory, getFotoAnalogica, getCategoryDV, getCategorySub } from '../../services/firebase';
 
-// eslint-disable-next-line no-unused-vars
-function FotoDigitalList() {  
+// eslint-disable-next-line no-unused-vars, react/prop-types
+function FotoDigitalList({type}) {  
   const [Photos, setPhotos] = useState([]);
+  const [responsive, isResponsive] = useState(false)
   const navigate = useNavigate();
 const params =useParams()
 const idCategory = params.idCategory
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
   async function leerDatos() {
-    let respuesta = await getCategory(idCategory);
+    let respuesta 
+    switch (type) {
+        case 'ddvcat':
+        respuesta = await getCategoryDV(idCategory);
+        console.log(getCategoryDV);
+        break;
+          case 'fdcat':
+            respuesta = await getCategory(idCategory);
+          break;
+          case 'sub':
+            respuesta = await getCategorySub(idCategory);
+          break;
+          case 'fotoan':
+            respuesta = await getFotoAnalogica();
+              break;
+      default: 
+      alert('hola')
+      break;
+      
+    }
+  
     setPhotos(respuesta);
   }
   useEffect(() => {
     leerDatos();
-  }, []);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [type]);
+  function esMobile(){
+    if(isMobile){
+      isResponsive(true)
+    }else{
+      isResponsive(false)
+    }
+    
+     }
+     useEffect(()=>{
+      esMobile();
+    },[false])
 
 
   
@@ -41,21 +73,14 @@ const idCategory = params.idCategory
   const handleClick = (titulo, categoria) => {
     navigate (`/fotodigital/${titulo}/${categoria}`);
   };
->>>>>>> 7447806e6b8e301253ee1cff3b3b50275fac756f
-
-import FotoDigital from '../FotoDigital/FotoDigital'
-// eslint-disable-next-line react/prop-types
-const FotoDigitalList = ({categories}) => {
+  const disable = ( ) => {
+    // eslint-disable-next-line no-undef
+    console.log(hola);
+  }
+  
   return (
-<<<<<<< HEAD
-      <div>
-             
-            <FotoDigital categories={categories}/>
-                  
-        </div>
-=======
     <div className='fotos-container'>
-          {modalOpen && (
+          {modalOpen  && (
               <div className="modal-bk">
                   <div className='modal-cont'>
                     <IoMdClose onClick={closeModal} className="modal-close-button">
@@ -69,7 +94,8 @@ const FotoDigitalList = ({categories}) => {
                   </div>
               </div>
           )}
-        <ImageList variant="masonry" cols={2} gap={80}>
+        
+        <ImageList variant="masonry" cols={ responsive ? 1 : 2} gap={responsive ? 30 :80}>
               {Photos.map((photo) => (
                 <ImageListItem key={photo.img}>{ photo.subcat ?                   
                    <img 
@@ -77,20 +103,19 @@ const FotoDigitalList = ({categories}) => {
                        srcSet={`${photo.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
                       alt={photo.category}
                       loading="lazy"
-                      data-title={photo.title}
-                      data-img={photo.img}
                       className='fotogrilla'
                      onClick={
-                          () => handleClick(photo.category, dato.description) } />                      
+                          () => handleClick(photo.category, photo.description) } />                      
                 : 
                 <img 
                 src={`${photo.img}?w=248&fit=crop&auto=format`}
                 srcSet={`${photo.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
                 alt={photo.category}
                 loading="lazy"
-                className='fotogrilla'
-                onClick={
-                   () => openModal(photo.img)}
+                className={ photo.category === 'continuidad' ?  'foto-cont':'fotogrilla'}
+                onClick={ photo.category === 'continuidad'|| responsive === true ?  () => disable():
+                   () => openModal(photo.img)
+                   }
             />
                 }
                 </ImageListItem>
@@ -100,8 +125,7 @@ const FotoDigitalList = ({categories}) => {
               ))}
         </ImageList>
     </div>
->>>>>>> 7447806e6b8e301253ee1cff3b3b50275fac756f
   )
 }
 
-export default FotoDigitalList
+export default FotoDigitalList;

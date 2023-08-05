@@ -1,0 +1,59 @@
+@font-face {
+    font-family: 'barlow-';
+    src: url();
+}
+
+.sobremi-container{
+    flex-direction: row;
+    margin: 40px;
+    display: flex;
+    justify-content: space-around;
+}
+.sobremi-data{
+    display: flex;
+    flex-direction: column;
+}
+.fotoana{
+    width:300px ;
+    height: auto;
+}
+.sobremi-info{
+    color: white;
+    font-family: 'barlow-light';
+    width: 50%;
+    font-size: 20px;
+    text-align: justify;
+}
+.cv{
+    color: white;
+    cursor: pointer;
+    font-family: 'barlow-sb';
+    margin-top: -2px;
+}
+.cv:hover{
+    color:pink;
+}
+.container-sb{
+    margin: 30px;
+}
+.sobremi-iconos{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+.iconos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.iconos-sb{
+    color: white;
+}
+.iconos-sb:hover{
+    color: pink;
+}
+.forms-sb{
+    margin-top: 150px;
+    display: flex;
+    justify-content: space-around;
+}

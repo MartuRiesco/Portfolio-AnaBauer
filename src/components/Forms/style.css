@@ -1,0 +1,97 @@
+@font-face {
+    font-family: 'barlow-bd';
+    src: url(../../fonts/Barlow-Bold.ttf);
+}
+.form-titulo{
+    color: white;
+    font-family: 'barlow-sb';
+    margin: 20px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 30px;
+    
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+
+.form-seccion {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-label {
+    text-align: left;
+    color: white;
+    font-size: small;
+    font-weight: 100;
+    font-family: 'barlow-sb'
+}
+
+.form-input {
+    text-align: left;
+    width: 438px;
+    color: white;
+    padding: 20px 5px;
+    border: white;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: white;
+    background-color: black;
+    margin: 25px 0;
+}
+
+.error {
+    margin-left: 50px;
+    margin-bottom: 10px;
+    color: pink;
+    font-family: 'barlow-bd';
+}
+
+.form-button {
+    width: 100px;
+    height: 40px;
+    border: solid;
+    color: white;
+    background-color: transparent;
+    border-color: white;
+    border-width: 2px;
+    padding-top: 5px;
+    font-size: 12px;
+}
+
+.textarea {
+    height: 150px;
+    border: solid;
+    border-color: white;
+    border-width: 2px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .form {
+        width: 300px;
+        margin: 50px 0 0 50px;
+    }
+    .form-input{
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .form-label{
+        font-size: 16px;
+    }
+
+    .form {
+        max-width: 100%;
+        margin: 40px 20px ;
+    }
+
+    .form-input {
+        max-width: 100%;
+        width: 90%;
+    }
+    
+}
