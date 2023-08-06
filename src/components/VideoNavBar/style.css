@@ -1,0 +1,89 @@
+@font-face {
+    font-family: 'barlow-sb';
+    src: url(../../fonts/Barlow-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: 'barlow-reg';
+    src: url(../../fonts/Barlow-Regular.ttf);
+
+}
+
+.container_navbar {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    font-family: 'barlow-sb';
+    text-transform: uppercase;
+    letter-spacing: .03rem;
+    margin-top: 1rem;
+    position: fixed;
+}
+
+.bot-navbar {
+    color: white;
+    font-family: 'barlow-reg';
+    transition: all .3s;
+    font-size: 1.7rem;
+    position: relative;
+    border-bottom: solid 3px transparent;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+.bot-navbar:hover {
+    font-family: 'barlow-sb';
+    border-bottom: solid 3px white;
+    padding-bottom: 10px;
+}
+
+span {
+    font-size: 2rem;
+    margin-right: 1.5rem;
+    position: absolute;
+    top: -4px;
+    right: -30px;
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+    .container_navbar {
+        max-width: 300px;
+        gap: 2rem;
+        margin-top: 1rem;
+    }
+
+    .bot-navbar {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .container_navbar {
+        max-width: 350px;
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 4rem;
+        position: relative;
+    }
+
+    .bot-navbar {
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .container_navbar {
+        max-width: 200px;
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 4rem;
+        position: relative;
+    }
+
+    .bot-navbar {
+        font-size: 1rem;
+    }
+}

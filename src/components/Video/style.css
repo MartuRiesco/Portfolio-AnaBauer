@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'barlow-sb';
+    src: url(../../fonts/Barlow-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: 'barlow-light';
+    src: url(../../fonts/Barlow-Regular.ttf);
+
+}
+
+.container_video {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 5rem;
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+    .container_video {
+        padding: 2rem 2rem;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .container_video {
+        grid-template-columns: 1fr;
+        padding: 2rem;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .container_video {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+}

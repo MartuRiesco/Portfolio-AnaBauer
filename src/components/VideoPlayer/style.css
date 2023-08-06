@@ -1,0 +1,144 @@
+@font-face {
+    font-family: 'barlow-sb';
+    src: url(../../fonts/Barlow-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: 'barlow-reg';
+    src: url(../../fonts/Barlow-Regular.ttf);
+
+}
+
+.container_videoplayer {
+    text-align: left;
+}
+
+.content-video {
+    margin-bottom: 10rem;
+    align-items: flex-end;
+}
+
+.content-player {
+    margin: 10rem 0;
+}
+
+.title {
+    font-size: 3rem;
+    font-family: 'barlow-sb';
+    text-transform: uppercase;
+    letter-spacing: .4rem;
+    text-align: left;
+    margin-bottom: 3rem;
+}
+
+.video-title {
+    display: flex;
+    flex-direction: row;
+}
+
+.title-trailer {
+    font-family: 'barlow-reg';
+    font-size: 2rem;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+    margin-top: 2rem;
+}
+
+.line {
+    color: white;
+    margin-top: 1rem;
+}
+
+.year {
+    font-family: 'barlow-reg';
+    font-size: 1.5rem;
+    color: white;
+    margin-left: 3rem;
+    margin-top: 2.6rem;
+}
+
+span .arrow {
+    color: white;
+}
+
+.subtitle {
+    font-family: 'barlow-reg';
+    font-size: 1.3rem;
+    margin: 1.5rem 0;
+    color: white;
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+    .content-player {
+        margin: 2rem 0;
+    }
+
+    .title {
+        font-size: 2rem;
+        letter-spacing: .3rem;
+        margin-bottom: 2rem;
+    }
+
+    .year {
+        font-size: 1.2rem;
+        margin-left: 3rem;
+        margin-top: 1.2rem;
+    }
+
+    .title-trailer {
+        font-size: 1.5rem;
+        letter-spacing: .2rem;
+        text-transform: uppercase;
+        margin-top: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .title {
+        font-size: 2rem;
+        letter-spacing: .3rem;
+    }
+
+    .content-player {
+        margin: 3rem 0;
+    }
+
+    .title-trailer {
+        font-size: 1.5rem;
+    }
+
+    .year {
+        font-size: 1rem;
+        margin-left: 3rem;
+        margin-top: 2.5rem;
+    }
+
+    .subtitle {
+        font-size: 1rem
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .title {
+        font-size: 1.2rem;
+        letter-spacing: .3rem;
+    }
+
+    .content-player {
+        margin: 1.5rem 0;
+    }
+
+    .title-trailer {
+        font-size: 1.2rem;
+    }
+
+    .year {
+        font-size: .7rem;
+        margin-left: 3rem;
+        margin-top: 2rem;
+    }
+
+    .subtitle {
+        font-size: .7rem
+    }
+}

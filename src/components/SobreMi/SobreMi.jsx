@@ -1,6 +1,7 @@
+// eslint-disable-next-line no-unused-vars
 import React from 'react'
 import './style.css'
-import{AiOutlineYoutube, AiOutlineInstagram, AiOutlineWhatsApp} from 'react-icons/ai'
+import{AiOutlineYoutube, AiOutlineInstagram} from 'react-icons/ai'
 import {BsVimeo} from 'react-icons/bs'
 import Forms from '../Forms/Forms'
 
