@@ -69,7 +69,7 @@ span .arrow {
     color: white;
 }
 
-@media screen and (min-width: 1025px) and (max-width: 1440px) {
+@media screen and (min-width: 1025px) and (max-width: 1441px) {
     .content-player {
         margin: 2rem 0;
     }

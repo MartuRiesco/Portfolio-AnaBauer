@@ -48,7 +48,7 @@ h5 {
     color: grey;
 }
 
-@media screen and (min-width: 1025px) and (max-width: 1440px) {
+@media screen and (min-width: 1025px) and (max-width: 1441px) {
     .container_navbar {
         max-width: 350px;
         gap: 1rem;
