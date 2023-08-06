@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'barlow-sb';
+    src: url(../../fonts/Barlow-SemiBold.ttf);
+}
+
+.button-top {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    z-index: 1;
+}
+
+h4 {
+    background-color: black;
+    font-family: 'barlow-sb';
+    text-transform: uppercase;
+    padding: 1rem;
+    width: 100px;
+    font-size: 3rem;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .button-top {
+        bottom: 40px;
+        left: 40px;
+    }
+
+    h4 {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .button-top {
+        bottom: 10px;
+        left: 10px;
+    }
+
+    h4 {
+        width: 50px;
+        padding: .5rem .2rem;
+        font-size: 1.5rem;
+    }
+}
