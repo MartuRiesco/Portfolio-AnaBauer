@@ -26,7 +26,6 @@ function VideoPlayer() {
     <div className='container_videoplayer'>
         
         <div className='content-video'>
-            <h1 className='title'>Dirección</h1>
             {direccion.map((data) => (
             // eslint-disable-next-line react/jsx-key
             <div id={data.title} className='content-player'>
@@ -41,7 +40,7 @@ function VideoPlayer() {
                     </div>
                 </div>
                 <div>
-                    <p className='line'>__________</p>
+                    <hr className='line' />
                     <h3 className='subtitle'>{data.description}</h3>
                 </div>
             </div>
@@ -49,7 +48,6 @@ function VideoPlayer() {
         </div>
 
         <div className='content-video'>
-            <h1 className='title'>Dirección de Fotografía</h1>
             {fotografia.map((data) => (
             // eslint-disable-next-line react/jsx-key
             <div name={data.title} className='content-player'>
@@ -64,7 +62,7 @@ function VideoPlayer() {
                     </div>
                 </div>
                 <div>
-                    <p className='line'>__________</p>
+                    <hr className='line' />
                     <h3 className='subtitle'>{data.description}</h3>
                 </div>
             </div>

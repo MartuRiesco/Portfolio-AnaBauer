@@ -13,7 +13,7 @@
     max-width: 400px;
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 2rem;
     font-family: 'barlow-sb';
     text-transform: uppercase;
     letter-spacing: .03rem;
@@ -38,23 +38,33 @@
     padding-bottom: 10px;
 }
 
-span {
-    font-size: 2rem;
-    margin-right: 1.5rem;
-    position: absolute;
-    top: -4px;
-    right: -30px;
+h5 {
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+}
+
+.data {
+    font-size: 1rem;
+    color: grey;
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1440px) {
     .container_navbar {
-        max-width: 300px;
-        gap: 2rem;
+        max-width: 350px;
+        gap: 1rem;
         margin-top: 1rem;
     }
 
     .bot-navbar {
-        font-size: 1.2rem;
+        font-size: 1rem;
+    }
+
+    h5 {
+        font-size: 1rem;
+    }
+    
+    .data {
+        font-size: .8rem;
     }
 }
 
@@ -68,8 +78,12 @@ span {
         position: relative;
     }
 
-    .bot-navbar {
-        font-size: 1.3rem;
+    h5 {
+        font-size: 1rem;
+    }
+    
+    .data {
+        font-size: .8rem;
     }
 }
 
@@ -85,5 +99,13 @@ span {
 
     .bot-navbar {
         font-size: 1rem;
+    }
+
+    h5 {
+        font-size: 1rem;
+    }
+    
+    .data {
+        font-size: .8rem;
     }
 }

@@ -25,22 +25,23 @@ function VideoNavBar() {
 
   return (
     <div className='container_navbar'>
-
             {direccion.map((data) => (
-            // eslint-disable-next-line react/jsx-key
-            <Link 
-                className='bot-navbar'
-                to={data.title} 
-                spy={true} 
-                smooth={true} 
-                offset={-80}  
-                duration={1200}
-            >
-                {data.title}
-            </Link>
+            <>
+                
+                <Link 
+                    className='bot-navbar'
+                    to={data.title} 
+                    spy={true} 
+                    smooth={true} 
+                    offset={-80}  
+                    duration={1200}
+                >
+                    <h5>{data.title}</h5>
+                    <p className='data'>{data.description}</p>
+                </Link>
+            </>
             
             ))}
-
             {fotografia.map((data) => (
             // eslint-disable-next-line react/jsx-key
             <Link 
@@ -51,7 +52,8 @@ function VideoNavBar() {
                 offset={-80}  
                 duration={1200}
             >
-                {data.title}
+                <h5>{data.title}</h5>
+                <p className='data'>{data.description}</p>
             </Link>
             
             ))}

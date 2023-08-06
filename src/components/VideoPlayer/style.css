@@ -46,7 +46,8 @@
 
 .line {
     color: white;
-    margin-top: 1rem;
+    margin: 2rem 0;
+    width: 60px;
 }
 
 .year {
@@ -82,7 +83,7 @@ span .arrow {
     .year {
         font-size: 1.2rem;
         margin-left: 3rem;
-        margin-top: 1.2rem;
+        margin-top: 1.8rem;
     }
 
     .title-trailer {
@@ -139,6 +140,6 @@ span .arrow {
     }
 
     .subtitle {
-        font-size: .7rem
+        font-size: 1rem
     }
 }
