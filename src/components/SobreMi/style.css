@@ -57,3 +57,30 @@
     display: flex;
     justify-content: space-around;
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .fotoana{
+        width: 200px;
+    }
+    .sobremi-info{
+        font-size: 15px;
+        width: 60%;
+    }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .sobremi-container{
+        flex-direction: column;
+    }
+    .sobremi-iconos{
+        margin: 15px;
+    }
+    .container-sb{
+        margin: 0;
+    }
+    .sobremi-info{
+        width: 100%;
+    }
+    .forms-sb{
+       display: contents;
+       margin-top: 50px;
+    }
+}

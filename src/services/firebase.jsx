@@ -70,3 +70,10 @@ const firebaseConfig = {
    const dataProducts= documents.map(doc=>doc.data())
   return dataProducts
   }
+  export async function getIndex() {
+    const coleccionProductos = collection(db,'index');
+  let snapshotProducts= await getDocs(coleccionProductos)
+  const documents= snapshotProducts.docs;
+   const dataProducts= documents.map(doc=>doc.data())
+  return dataProducts
+  }

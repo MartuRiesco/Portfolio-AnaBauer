@@ -5,6 +5,7 @@ import Video from './components/Video/Video'
 import FotoDigital from './components/FotoDigital/FotoDigital';
 import FotoDigitalList from './components/FotoDigitalList/FotoDigitalList';
 import SobreMi from './components/SobreMi/SobreMi';
+import Index from './components/Index/Index';
 
 function App() {
   document.oncontextmenu = function () {
@@ -17,6 +18,7 @@ function App() {
       <Header />
       <main>
         <Routes>
+          <Route path='/' element={<Index/>}></Route>
             <Route path='/fotodigital' element={<FotoDigital type={'fotodig'} />}/>
             <Route path='/fotodigital/:idCategory' element={<FotoDigitalList type={'fdcat'}/>} />
             <Route path='/fotoanalogica' element={<FotoDigitalList type={'fotoan'} />}/>
