@@ -5,11 +5,6 @@ import './style.css'
 function Reel() {
   return (
       <div className='reel'>
-      
-            <div className='titulo-container'>
-                <hr className='hr1' /> <h2 className='titulo-reel'> REEL</h2>
-            </div>
-
             <div className='iframe-reel'>
                 <iframe 
                     src="https://player.vimeo.com/video/848918316?h=97737faf66" 

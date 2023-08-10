@@ -1,0 +1,12 @@
+.mySwiper{
+    height: 100vh;
+    width: 100%;
+}
+.imagen-swiper{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.swiper-button-prev, .swiper-button-next{
+    color:  rgb(255, 100, 157);
+}

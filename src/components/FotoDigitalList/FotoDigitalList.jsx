@@ -97,7 +97,11 @@ const idCategory = params.idCategory
         
         <ImageList variant="masonry" cols={ responsive ? 1 : 2} gap={responsive ? 30 :80}>
               {Photos.map((photo) => (
-                <ImageListItem key={photo.img}>{ photo.subcat ?                   
+                <ImageListItem key={photo.img}>{ photo.subcat ?     
+                  <><div className='cover'  onClick={
+                    () => handleClick(photo.category, photo.description) }>
+                    <h1 className='titulo-cover'>{photo.title}</h1>
+                    </div>              
                    <img 
                       src={`${photo.img}?w=248&fit=crop&auto=format`}
                        srcSet={`${photo.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
@@ -106,6 +110,7 @@ const idCategory = params.idCategory
                       className='fotogrilla'
                      onClick={
                           () => handleClick(photo.category, photo.description) } />                      
+                </>
                 : 
                 <img 
                 src={`${photo.img}?w=248&fit=crop&auto=format`}

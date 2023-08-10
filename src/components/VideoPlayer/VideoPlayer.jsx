@@ -31,7 +31,7 @@ function VideoPlayer() {
             // eslint-disable-next-line react/jsx-key
             <div id={data.title} className='content-player'>
                 <ReactPlayer
-                    url={'https://player.vimeo.com/video/848918316?h=97737faf66'}
+                    url={data.link}
                     controls = {'true'}
                 />
                 <div className='content_text'>
@@ -54,7 +54,7 @@ function VideoPlayer() {
             // eslint-disable-next-line react/jsx-key
             <div name={data.title} className='content-player'>
                 <ReactPlayer
-                    url={'https://player.vimeo.com/video/848918316?h=97737faf66'}
+                    url={data.link}
                     controls = {'true'}
                 />
                 <div className='content_text'>

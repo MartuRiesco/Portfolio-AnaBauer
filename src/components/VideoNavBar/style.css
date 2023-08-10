@@ -10,14 +10,14 @@
 }
 
 .container_navbar {
-    max-width: 400px;
+    max-width: 350px;
+    gap: 1rem;
+    margin-top: 1rem;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
     font-family: 'barlow-sb';
     text-transform: uppercase;
     letter-spacing: .03rem;
-    margin-top: 1rem;
     position: fixed;
 }
 
@@ -25,7 +25,8 @@
     color: white;
     font-family: 'barlow-reg';
     transition: all .3s;
-    font-size: 1.7rem;
+    font-size: 1rem;
+    color: red;
     position: relative;
     border-bottom: solid 3px transparent;
     padding-bottom: 10px;
@@ -39,12 +40,13 @@
 }
 
 h5 {
-    font-size: 1.5rem;
+    font-size: 1rem;
+    color: rgb(255, 100, 157);
     margin-bottom: .5rem;
 }
 
 .data {
-    font-size: 1rem;
+    font-size: .8rem;
     color: grey;
 }
 

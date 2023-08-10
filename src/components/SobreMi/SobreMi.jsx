@@ -23,14 +23,22 @@ function SobreMi() {
 
         </div>
         <div className='sobremi-info'>
-            <p>Soy Ana Bauer, fotógrafa y filmmaker. Tengo 23 años y soy argentina. 
-Actualmente, me encuentro estudiando la carrera de Dirección de Fotografía en la Universidad del Cine, aunque estudio y me desempeño como fotógrafa desde la adolescencia.
-Me considero una persona simpática, trabajadora y altamente creativa, siempre en búsqueda de inspiración para nuevos proyectos.
-Hablo cuatro idiomas, lo que me permite conectar con personas de diferentes culturas y enriquecer mi visión del mundo. Además, viajar es una de mis mayores pasiones y me brinda la posibilidad de descubrir la belleza única que se esconde en cada rincón del planeta. Adoro aprender, explotar y estoy  constantemente persiguiendo nuevos desafíos. 
-Estoy siempre en búsqueda de capturar la esencia y emociones en cada imagen que capturo, resaltando la belleza intrínseca de las cosas y la unicidad de cada persona. 
-Creo firmemente que la fotografía y el cine son herramientas poderosa para contar, transmitir emociones y mostrar mi forma de transitar la vida.
+            <p className='informacion'> <span className='negrita'> Soy Ana Bauer, fotógrafa y filmmaker argentina. </span>
+<br />
+Tengo 23 años y soy estudiante de la carrera de Dirección de Fotografía en la Universidad del Cine, aunque me dedico a la fotografía desde mi adolescencia.
+<br />
+Me considero simpática, trabajadora y altamente creativa, siempre en búsqueda de inspiración para nuevos proyectos.
+<br />
+Viajar es una de mis mayores pasiones y me brinda la posibilidad de descubrir la belleza única que se esconde en cada rincón del planeta. 
+<br />
+Siempre estoy buscando aprender, crecer y enfrentar nuevos desafíos. Mi objetivo es capturar la esencia y las emociones en cada imagen, resaltando la belleza intrínseca de las cosas y la singularidad de cada persona.
+<br />
+Creo firmemente que la fotografía y el cine son herramientas poderosa para contar, transmitir y trascender. 
+<br />
 En este sitio web, espero compartir con ustedes mis proyectos fotográficos y cinematográficos, mis experiencias y un poco de mi mundo. 
-Gracias por visitarlo y ser parte de este viaje creativo.
+<br />
+<span className='italica'>Gracias por visitarlo y ser parte de este viaje creativo.</span>
+
 </p>
 
         </div>

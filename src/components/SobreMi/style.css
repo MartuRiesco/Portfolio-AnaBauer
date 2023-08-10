@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'barlow-';
-    src: url();
+    font-family: 'barlow-it';
+    src: url(../../fonts/Barlow-Italic.ttf);
 }
 
 .sobremi-container{
@@ -24,6 +24,12 @@
     font-size: 20px;
     text-align: justify;
 }
+.informacion{
+    line-height: 1.8;
+}
+.negrita{
+    font-family: 'barlow-sb';
+}
 .cv{
     color: white;
     cursor: pointer;
@@ -32,6 +38,9 @@
 }
 .cv:hover{
     color:pink;
+}
+.italica{
+    font-family: 'barlow-it';
 }
 .container-sb{
     margin: 30px;

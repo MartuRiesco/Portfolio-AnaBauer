@@ -1,8 +1,28 @@
+@font-face {
+    font-family: 'barlow-reg';
+    src: url(../../fonts/Barlow-Light.ttf);
+}
 .fotos-container{
     margin: 50px;
 }
 .fotogrilla{
     cursor: pointer;
+    width: 100%;
+}
+.cover{
+    opacity: 0.7;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+}
+.titulo-cover{
+    font-family: 'barlow-reg';
+    font-size: 30px;
 }
 .grilla-fotos{
 margin: 50px;

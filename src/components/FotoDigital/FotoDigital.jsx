@@ -53,16 +53,17 @@ function FotoDigital({type}) {
                 <Grid mobile={1} tablet={3} laptop={4}>
                 <Item>
                   <Link to={photo.category}>
-                        <img 
+                    <div className='foto-container'>
+                      <img 
                             src={`${photo.img}?w=248&fit=crop&auto=format`}
                             srcSet={`${photo.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
                             alt={photo.category}
                             loading="lazy"
                             className='foto-dig-grilla'
-                            // Si contiene sub-category es true, navega hacia ella, si es false, activa openModal
-                           
-
-                        /> </Link>
+                        /> 
+                        <div className='foto-titulo'><h1 className='titulo-cover'>{photo.title}</h1></div>
+                        </div></Link>
+                        
                         </Item>
                         </Grid>
                

@@ -16,10 +16,9 @@ function Header() {
         <div className="header__content-logo">
           <Link to="/">
             {' '}
-            <section className="loguito">
-              <h2 className="titulo-pag">A N A </h2>
-              <h2 className="titulo-pag">B A U E R </h2>{' '}
-            </section>
+            <div className="loguito">
+              <h2 className="titulo-pag">A N A &nbsp;&nbsp;&nbsp;&nbsp; B A U E R </h2>
+            </div>
           </Link>
         </div>
         <div className="header__content-menu">

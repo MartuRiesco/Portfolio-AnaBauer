@@ -66,11 +66,11 @@
   }
   
   .menu:hover {
-    color: pink;
+    color: rgb(255, 100, 157);
     cursor: pointer;
   }
- .titulo-pag:hover{
-    color: pink;
+  .titulo-pag:hover{
+    color:  rgb(255, 100, 157);
   }
   
   @media screen and (max-width: 768px) {
