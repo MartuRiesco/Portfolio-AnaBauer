@@ -18,7 +18,7 @@ function App() {
       <Header />
       <main>
         <Routes>
-          <Route path='/' element={<Index/>}></Route>
+            <Route path='/' element={<Index />}></Route>
             <Route path='/fotodigital' element={<FotoDigital type={'fotodig'} />}/>
             <Route path='/fotodigital/:idCategory' element={<FotoDigitalList type={'fdcat'}/>} />
             <Route path='/fotoanalogica' element={<FotoDigitalList type={'fotoan'} />}/>
@@ -28,10 +28,11 @@ function App() {
             <Route path='/fotodigital/fotoperiodismo/:idCategory' element={<FotoDigitalList type={'sub'} />} />
             <Route path='/fotodigital/diariodeviaje/:idCategory' element={<FotoDigitalList type={'ddvcat'} />} />
             <Route path='/cine' element={<Video />}/>
-            <Route path='/sobremi' element={<SobreMi/>}/>
+            <Route path='/sobremi' element={ <SobreMi/> }/>
         </Routes>
+         
       </main>
-     
+                   
     </div>
   </BrowserRouter>
   )

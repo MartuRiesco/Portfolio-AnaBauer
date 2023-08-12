@@ -4,6 +4,7 @@ import './style.css'
 import{AiOutlineYoutube, AiOutlineInstagram} from 'react-icons/ai'
 import {BsVimeo} from 'react-icons/bs'
 import Forms from '../Forms/Forms'
+import Footer from '../Footer/Footer'
 
 function SobreMi() {
   return (
@@ -46,6 +47,7 @@ En este sitio web, espero compartir con ustedes mis proyectos fotográficos y ci
     <div className='forms-sb'>
     <Forms/>
     </div>
+    <Footer />
     </div>
   )
 }
