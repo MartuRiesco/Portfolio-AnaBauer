@@ -45,18 +45,18 @@ const idCategory = params.idCategory
     leerDatos();
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [type]);
-  function esMobile(){
-    if(isMobile){
-      isResponsive(true)
-    }else{
-      isResponsive(false)
-    }
-    
-     }
-     useEffect(()=>{
-      esMobile();
-    },[false])
+  const colsConfig = {
+    desktop: 2,
+    mobile: 1,
+  };
+  
+  const gapConfig = {
+    desktop: 80,
+    mobile: 30,
+  };
+  
 
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent); 
 
   
   const openModal = (image) => {
@@ -95,7 +95,9 @@ const idCategory = params.idCategory
               </div>
           )}
         
-        <ImageList variant="masonry" cols={ responsive ? 1 : 2} gap={responsive ? 30 :80}>
+        <ImageList variant="masonry"
+      cols={colsConfig[isMobile ? 'mobile' : 'desktop']}
+      gap={gapConfig[isMobile ? 'mobile' : 'desktop']}>
               {Photos.map((photo) => (
                 <ImageListItem key={photo.img}>{ photo.subcat ?     
                   <><div className='cover'  onClick={

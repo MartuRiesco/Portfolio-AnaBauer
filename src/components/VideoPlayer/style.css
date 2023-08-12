@@ -8,6 +8,10 @@
     src: url(../../fonts/Barlow-Regular.ttf);
 
 }
+.imagen-iframe{
+    width: 640px;
+    height: 360px;
+}
 
 .container_videoplayer {
     text-align: left;
@@ -46,16 +50,16 @@
 
 .line {
     color: white;
-    margin: 2rem 0;
-    width: 60px;
+    margin: 8% 10px;
+    width: 31px;
 }
 
 .year {
     font-family: 'barlow-reg';
     font-size: 1.5rem;
     color: white;
-    margin-left: 3rem;
-    margin-top: 2.6rem;
+ 
+    margin-top: 2.3rem;
 }
 
 span .arrow {
@@ -65,7 +69,7 @@ span .arrow {
 .subtitle {
     font-family: 'barlow-reg';
     font-size: 1.3rem;
-    margin: 1.5rem 0;
+    margin: 0.8rem 0;
     color: white;
 }
 
@@ -82,7 +86,6 @@ span .arrow {
 
     .year {
         font-size: 1.2rem;
-        margin-left: 3rem;
         margin-top: 1.8rem;
     }
 
@@ -99,6 +102,9 @@ span .arrow {
         font-size: 2rem;
         letter-spacing: .3rem;
     }
+    .line {
+        margin: 7% 10px;
+    }
 
     .content-player {
         margin: 3rem 0;
@@ -110,7 +116,7 @@ span .arrow {
 
     .year {
         font-size: 1rem;
-        margin-left: 3rem;
+       
         margin-top: 2.5rem;
     }
 
@@ -124,7 +130,9 @@ span .arrow {
         font-size: 1.2rem;
         letter-spacing: .3rem;
     }
-
+    .line {
+        margin: 7% 10px;
+    }
     .content-player {
         margin: 1.5rem 0;
     }
@@ -135,8 +143,7 @@ span .arrow {
 
     .year {
         font-size: .7rem;
-        margin-left: 3rem;
-        margin-top: 2rem;
+        margin-top: 2.4rem;
     }
 
     .subtitle {

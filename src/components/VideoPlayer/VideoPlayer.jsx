@@ -30,18 +30,22 @@ function VideoPlayer() {
             {direccion.map((data) => (
             // eslint-disable-next-line react/jsx-key
             <div id={data.title} className='content-player'>
-                <ReactPlayer
+                {
+                    data.title == 'Ley de Murphy' ?
+                  <a href={data.link}> <img src={data.img} alt={data.img}  className='imagen-iframe'/></a>: 
+                  <ReactPlayer
                     url={data.link}
                     controls = {'true'}
                 />
+                }
+               
                 <div className='content_text'>
                     <div className='video-title'>
-                        <h1 className='title-trailer'>{data.title}</h1>
+                        <h1 className='title-trailer'>{data.title}</h1><hr className='line' />
                         <p className='year'>{data.year}</p>
                     </div>
                 </div>
                 <div>
-                    <hr className='line' />
                     <h3 className='subtitle'>{data.description}</h3>
                 </div>
             </div>
@@ -60,11 +64,12 @@ function VideoPlayer() {
                 <div className='content_text'>
                     <div className='video-title'>
                         <h1 className='title-trailer'>{data.title}</h1>
+                        <hr className='line' />
                         <p className='year'>{data.year}</p>
                     </div>
                 </div>
                 <div>
-                    <hr className='line' />
+                   
                     <h3 className='subtitle'>{data.description}</h3>
                 </div>
             </div>
