@@ -11,6 +11,7 @@
 .imagen-iframe{
     width: 640px;
     height: 360px;
+    cursor: pointer;
 }
 
 .container_videoplayer {
