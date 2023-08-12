@@ -1,9 +1,11 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react'
 import './style.css'
+import Footer from '../Footer/Footer'
 
 function Reel() {
   return (
+      <>
       <div className='reel'>
             <div className='iframe-reel'>
                 <iframe 
@@ -14,8 +16,9 @@ function Reel() {
                     allowfullscreen>
                 </iframe>
             </div>
-
       </div>
+      <Footer />
+      </>
   )
 }
 

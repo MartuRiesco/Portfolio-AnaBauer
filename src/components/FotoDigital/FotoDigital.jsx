@@ -8,6 +8,7 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 import Item from '@mui/material/Unstable_Grid2'
 import { Link } from 'react-router-dom';
 import { getDiarioDeViajes, getFotoDigital } from '../../services/firebase';
+import Footer from '../Footer/Footer';
 
 function FotoDigital({type}) { 
   const [Photos, setPhotos] = useState([]);
@@ -71,6 +72,7 @@ function FotoDigital({type}) {
         
           </Grid>
           </ThemeProvider>
+          <Footer />
     </div>
   )
 }

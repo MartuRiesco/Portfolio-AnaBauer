@@ -7,6 +7,7 @@ import { isMobile } from 'react-device-detect';
 import { IoMdClose } from 'react-icons/io';
 import { useNavigate, useParams } from 'react-router-dom';
 import { getCategory, getFotoAnalogica, getCategoryDV, getCategorySub } from '../../services/firebase';
+import Footer from '../Footer/Footer';
 
 // eslint-disable-next-line no-unused-vars, react/prop-types
 function FotoDigitalList({type}) {  
@@ -131,6 +132,7 @@ const idCategory = params.idCategory
    
               ))}
         </ImageList>
+        <Footer />
     </div>
   )
 }

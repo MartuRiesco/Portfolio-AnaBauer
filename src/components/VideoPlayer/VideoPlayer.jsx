@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from 'react'
 import ReactPlayer from 'react-player';
 import { getVideosDireccion, getVideosFotografia } from '../../services/firebase';
-//import VideoDosCorazones from '../../assets/Videos/dos-corazones-trailer.mp4';
 import './style.css';
 
 function VideoPlayer() {
@@ -75,7 +74,6 @@ function VideoPlayer() {
             </div>
             ))}
         </div>    
-
     </div>
   )
 }
