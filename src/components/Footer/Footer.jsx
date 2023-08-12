@@ -12,9 +12,8 @@ function Footer() {
                 <p>©2023  Ana Bauer. Todos los derechos reservados.</p>
             </div>
             <div className='footer__content-developer'>
-                    <p>Web Developer</p>  
-                <Link to='https://www.instagram.com/mymwebdevelopers/'>
-                    <img src={Logo} alt='Web Developer - Martina & Martin' height={80}></img>
+                <Link to='https://www.instagram.com/mymdevelopers/'>
+                    <img src={Logo} alt='Web Developer - Martina & Martin'  className='footer-img'></img>
                 </Link>
             </div>
         </div>

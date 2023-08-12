@@ -32,10 +32,7 @@ function VideoPlayer() {
                 {
                     data.title == 'Ley de Murphy' ?
                   <a href={data.link}> <img src={data.img} alt={data.img}  className='imagen-iframe'/></a>: 
-                  <ReactPlayer
-                    url={data.link}
-                    controls = {'true'}
-                />
+                <iframe src={data.link} className='iframe-cine' frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                 }
                
                 <div className='content_text'>
@@ -56,10 +53,7 @@ function VideoPlayer() {
             {fotografia.map((data) => (
             // eslint-disable-next-line react/jsx-key
             <div name={data.title} className='content-player'>
-                <ReactPlayer
-                    url={data.link}
-                    controls = {'true'}
-                />
+                 <iframe src={data.link} className='iframe-cine'  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 <div className='content_text'>
                     <div className='video-title'>
                         <h1 className='title-trailer'>{data.title}</h1>

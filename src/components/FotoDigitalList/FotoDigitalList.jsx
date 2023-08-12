@@ -46,6 +46,16 @@ const idCategory = params.idCategory
     leerDatos();
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [type]);
+  function esMobile(){
+    if(isMobile){
+      isResponsive(true)
+    }else{
+      isResponsive(false)
+    }
+     }
+     useEffect(()=>{
+      esMobile();
+    },[false])
   const colsConfig = {
     desktop: 2,
     mobile: 1,

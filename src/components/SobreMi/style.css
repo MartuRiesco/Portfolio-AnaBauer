@@ -37,7 +37,7 @@
     margin-top: -2px;
 }
 .cv:hover{
-    color:pink;
+    color:rgb(255, 100, 157);
 }
 .italica{
     font-family: 'barlow-it';
@@ -59,7 +59,7 @@
     color: white;
 }
 .iconos-sb:hover{
-    color: pink;
+    color: rgb(255, 100, 157);
 }
 .forms-sb{
     margin-top: 150px;

@@ -15,7 +15,7 @@ a:hover {
 .footer {
     margin: 0 auto;
     color: white;
-    font-family: 'barlow-sb';
+    font-family: 'barlow-th';
 }
 
 .footer__content {
@@ -36,6 +36,9 @@ a:hover {
     gap: 1rem;
 }
 
+.footer-img{
+    height: 80px;
+}
 
 
 
@@ -72,14 +75,13 @@ a:hover {
 
     .footer__content {
         flex-direction: column;
-        padding: auto;
+        padding: 0;
         margin: 15px 0;
     }
 
     .footer__content-copyright {
-        width: 300px;
+        width: 260px;
     }
-
     .footer__content-copyright >  p {
         font-size: 12px;
         width: 100%;

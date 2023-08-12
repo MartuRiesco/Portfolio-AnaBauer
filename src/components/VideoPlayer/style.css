@@ -65,7 +65,10 @@
 span .arrow {
     color: white;
 }
-
+.iframe-cine{
+    height: 360px;
+    width: 640px;
+}
 .subtitle {
     font-family: 'barlow-reg';
     font-size: 1.3rem;
@@ -131,16 +134,22 @@ span .arrow {
         letter-spacing: .3rem;
     }
     .line {
-        margin: 7% 10px;
+        margin: 11% 10px;
     }
     .content-player {
-        margin: 1.5rem 0;
+        margin: 0.5rem 0 4.5rem 0;
     }
 
     .title-trailer {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
-
+    .iframe-cine{
+        width:90vw;
+    }
+    .imagen-iframe{
+        width: 90vw;
+        height: auto;
+    }
     .year {
         font-size: .7rem;
         margin-top: 2.4rem;
