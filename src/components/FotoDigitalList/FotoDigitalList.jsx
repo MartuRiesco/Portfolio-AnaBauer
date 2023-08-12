@@ -3,36 +3,45 @@
 import React, { useEffect, useState } from 'react';
 import './styles.css';
 import { ImageList, ImageListItem } from '@mui/material';
+// eslint-disable-next-line no-unused-vars
 import { isMobile } from 'react-device-detect';
 import { IoMdClose } from 'react-icons/io';
 import { useNavigate, useParams } from 'react-router-dom';
 import { getCategory, getFotoAnalogica, getCategoryDV, getCategorySub } from '../../services/firebase';
 import Footer from '../Footer/Footer';
+import Loader from '../Loader/Loader';
 
 // eslint-disable-next-line no-unused-vars, react/prop-types
 function FotoDigitalList({type}) {  
+
   const [Photos, setPhotos] = useState([]);
   const [responsive, isResponsive] = useState(false)
   const navigate = useNavigate();
-const params =useParams()
-const idCategory = params.idCategory
+  const params =useParams()
+  const idCategory = params.idCategory
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
   async function leerDatos() {
+
     let respuesta 
     switch (type) {
-        case 'ddvcat':
-        respuesta = await getCategoryDV(idCategory);
-        console.log(getCategoryDV);
-        break;
+          case 'ddvcat':
+              respuesta = await getCategoryDV(idCategory);
+              setIsLoading(false);
+              console.log(getCategoryDV);
+              break;
           case 'fdcat':
-            respuesta = await getCategory(idCategory);
-          break;
+              respuesta = await getCategory(idCategory);
+              setIsLoading(false);
+              break;
           case 'sub':
-            respuesta = await getCategorySub(idCategory);
-          break;
+              respuesta = await getCategorySub(idCategory);
+              setIsLoading(false);
+              break;
           case 'fotoan':
-            respuesta = await getFotoAnalogica();
+              respuesta = await getFotoAnalogica();
+              setIsLoading(false);
               break;
       default: 
       alert('hola')
@@ -46,14 +55,16 @@ const idCategory = params.idCategory
     leerDatos();
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [type]);
+
   function esMobile(){
-    if(isMobile){
+    if (isMobile){
       isResponsive(true)
-    }else{
+    } else {
       isResponsive(false)
     }
-     }
-     useEffect(()=>{
+    }
+
+    useEffect(()=>{
       esMobile();
     },[false])
   const colsConfig = {
@@ -67,7 +78,7 @@ const idCategory = params.idCategory
   };
   
 
-    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent); 
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent); 
 
   
   const openModal = (image) => {
@@ -91,6 +102,7 @@ const idCategory = params.idCategory
   
   return (
     <div className='fotos-container'>
+      
           {modalOpen  && (
               <div className="modal-bk">
                   <div className='modal-cont'>
@@ -105,7 +117,10 @@ const idCategory = params.idCategory
                   </div>
               </div>
           )}
-        
+        {
+        isLoading ?
+          <Loader />
+          :
         <ImageList variant="masonry"
       cols={colsConfig[isMobile ? 'mobile' : 'desktop']}
       gap={gapConfig[isMobile ? 'mobile' : 'desktop']}>
@@ -142,6 +157,8 @@ const idCategory = params.idCategory
    
               ))}
         </ImageList>
+
+      }
         <Footer />
     </div>
   )
