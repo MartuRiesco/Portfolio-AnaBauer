@@ -9,17 +9,23 @@ import Item from '@mui/material/Unstable_Grid2'
 import { Link } from 'react-router-dom';
 import { getDiarioDeViajes, getFotoDigital } from '../../services/firebase';
 import Footer from '../Footer/Footer';
+import Loader from '../Loader/Loader';
 
 function FotoDigital({type}) { 
   const [Photos, setPhotos] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
   async function leerDatos() {
+
     let respuesta 
     switch (type) {
         case 'ddviajes':
         respuesta = await getDiarioDeViajes();
+        setIsLoading(false);
           break;
           case 'fotodig':
             respuesta = await getFotoDigital();
+            setIsLoading(false);
           break;
       default: 
       alert('hola')
@@ -48,7 +54,11 @@ function FotoDigital({type}) {
           },
         },
       })}
-    >
+    >     
+          {
+            isLoading ?
+            <Loader/> :
+
           <Grid container spacing={1} columns={{ mobile:1, tablet:6, laptop:12}} disableEqualOverflow>
               {Photos.map((photo) => (
                 <Grid mobile={1} tablet={3} laptop={4}>
@@ -71,7 +81,11 @@ function FotoDigital({type}) {
               ))}
         
           </Grid>
+
+          }
+
           </ThemeProvider>
+
           <Footer />
     </div>
   )
