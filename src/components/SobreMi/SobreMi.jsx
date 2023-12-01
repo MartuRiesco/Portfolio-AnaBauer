@@ -6,6 +6,7 @@ import {BsVimeo} from 'react-icons/bs'
 import Forms from '../Forms/Forms'
 import Footer from '../Footer/Footer'
 
+
 function SobreMi() {
   return (
     <div className='container-sb'>
@@ -17,7 +18,7 @@ function SobreMi() {
                <a href="https://www.instagram.com/bauerani/" className='iconos-sb'> <AiOutlineInstagram/></a>              
                <a href="https://www.youtube.com/channel/UCIHvh-B6-JEnVSUcS2TQDAA" className='iconos-sb'> <AiOutlineYoutube/></a>
                <a href="https://vimeo.com/user202548570" className='iconos-sb'> <BsVimeo/></a>               
-              <a href="https://drive.google.com/file/d/1vichv6PI5EEFqK5-fXk7ETLPPvnYe19f/view"> <h3 className='cv'> CV</h3></a>
+              <a href="https://drive.google.com/file/d/1i2W1-HuQbesJnUyFFsl7B0rm6CAzIukI/view?usp=sharing"> <h3 className='cv'> CV</h3></a>
                 </div>
 
             </div>
