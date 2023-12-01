@@ -30,7 +30,7 @@ Para ejecutar este proyecto en tu entorno local, sigue estos pasos:
    git clone https://github.com/MartuRiesco/Portfolio-AnaBauer.git
 Instala las dependencias.
 
-```bash
+
 Copy code
 cd Portfolio-AnaBauer
 npm install
@@ -40,10 +40,10 @@ Copy code
 npm run dev
 La aplicación estará disponible en http://localhost:3000.
 
-Colaboración y Contribuciones
+## Colaboración y Contribuciones
 Si deseas contribuir, abrir problemas o sugerir mejoras, ¡serán recibidos con entusiasmo! Por favor, sigue las mejores prácticas y normas de contribución.
 
-Contacto
+ ## Contacto
 Para cualquier consulta o colaboración, puedes ponerte en contacto con Ana Bauer en anibauer2000@gmail.com.
 
 ¡Gracias por explorar la obra de Ana Bauer!
